@@ -1,0 +1,56 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    display: flex;
+    min-height: 100Vh;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.pulse {
+    width: 5rem;
+    height: 5rem;
+    background: linear-gradient(#65c0e7, #223500);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 2rem;
+    color: #fff;
+  }
+  
+  .pulse:before,
+  .pulse:after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #65c8e7;
+    border-radius: 50%;
+    z-index: -1;
+    opacity: 0.7;
+  }
+  
+  .pulse:before {
+    animation: pulse 2s ease-out infinite;
+  }
+  
+  .pulse:after {
+    animation: pulse 2s ease-out infinite;
+  }
+  
+  @keyframes pulse {
+    100% {
+      transform: scale(2.5);
+      opacity: 0;
+    }
+  }
+  
+  
